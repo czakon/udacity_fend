@@ -1,0 +1,77 @@
+body {
+  font-family: "Apple SD Gothic Neo";
+}
+
+.logo {
+  width: 100%;
+}
+
+.row-image {
+  max-width: 100%;
+  margin-bottom: 30px;
+  height: auto;
+}
+
+.small-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.small-image-c {
+  max-width: 80%;
+  margin-left: 10%;
+  margin-right:10%;
+  margin-top: 0%;
+  height: auto;
+}
+
+.small-image-text {
+  text-align:center;
+  color: #4d4d4d;
+
+}
+
+.row-image-container {
+  margin-top: 15px;
+  /*margin-left: auto;*/
+  /*margin-right: auto;*/
+}
+
+.banner_text {
+  width: 85%;
+}
+
+.name {
+  text-align:right;
+  color: #4d4d4d;
+  font-family: "Apple SD Gothic Neo";
+}
+.title {
+  text-align:right;
+  color: #4d4d4d;
+  font-family: "Apple SD Gothic Neo";
+}
+
+.item {
+  width: 100%;
+  height: auto;
+  clear: both;
+}
+.item img {
+  float: left
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 200px;
+  border: 0;
+  border-top: 1px solid #7d7d7d;
+  margin: 1em 0;
+  padding: 0;
+}
+
+
