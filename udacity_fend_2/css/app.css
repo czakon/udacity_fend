@@ -77,9 +77,16 @@ h1 {
 }
 
 .deck .card.open {
+    /*
     transform: rotateY(0);
+    */
     background: #02b3e4;
     cursor: default;
+}
+
+.deck .card.wrong {
+    background: #e41f35;
+    transform: scale(1.1);
 }
 
 .deck .card.show {

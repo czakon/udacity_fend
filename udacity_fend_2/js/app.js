@@ -9,22 +9,22 @@
  */
 
 // Get the startTime for the timer.
-var startTime = new Date().getTime();
+let startTime = new Date().getTime();
 
-var runTimer = true;
+let runTimer = true;
 
 // Update the counter every 1 second
-var x = setInterval(function() {
+setInterval(function() {
     if (runTimer) {
         // Get todays date and time
-        var now = new Date().getTime();
+        const now = new Date().getTime();
 
         // Find the distance between now and the count down date
-        var timeElapsed = now-startTime;
+        const timeElapsed = now-startTime;
 
 
-        var minutes = Math.floor((timeElapsed % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((timeElapsed % (1000 * 60)) / 1000);
+        const minutes = Math.floor((timeElapsed % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeElapsed % (1000 * 60)) / 1000);
 
         // Display the result in the element with id="demo"
         document.getElementById("timer").innerHTML = minutes + "m " + seconds + "s ";
@@ -56,9 +56,9 @@ function makeStar() {
 }
 
 function initGrid() {
-    var syms = ['diamond','paper-plane-o','anchor','bolt','bomb','cube','leaf','bicycle'];
-    var cards = shuffle([...syms,...syms]);
-    var cardHTML = cards.map(function(card) {
+    const syms = ['diamond','paper-plane-o','anchor','bolt','bomb','cube','leaf','bicycle'];
+    let cards = shuffle([...syms,...syms]);
+    let cardHTML = cards.map(function(card) {
         return makeCard(card);
     });
 
@@ -68,7 +68,7 @@ function initGrid() {
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
-    var currentIndex = array.length, temporaryValue, randomIndex;
+    let currentIndex = array.length, temporaryValue, randomIndex;
 
     while (currentIndex !== 0) {
         randomIndex = Math.floor(Math.random() * currentIndex);
@@ -89,30 +89,30 @@ function initGame() {
 }
 
 // Initial initialization
-var deck = document.querySelector('.deck');
+let deck = document.querySelector('.deck');
 
 //  Make a counter to track the number matches.
-n_matches=0;
+let n_matches=0;
 
 //  Make a counter for the number of moves.
 moves = document.querySelector('.moves');
 
-n_moves=0;
+let n_moves=0;
 
 //  Initiate The Stars
 stars = document.querySelector('.stars');
-n_stars=3;
+let n_stars=3;
 
 // Add the shuffled cards and initiate the star rating.
 initGame();
 // Reset how many openCards exist.
-openCard = [];
+let openCard = [];
 
 // Get the modal
-var modal = document.getElementById('myModal');
+let modal = document.getElementById('myModal');
 // modal.style.display = "none";
 
-document.querySelectorAll('.restart')[0].addEventListener('click',function (e) {
+document.querySelectorAll('.restart')[0].addEventListener('click',function () {
     n_matches=0;
     n_moves=0;
     n_stars=3;
@@ -139,8 +139,8 @@ deck.addEventListener('click', function(event) {
         // Another Open Card Exists
         else {
             //Card Matches, But Is Not Exactly The Same Card.
-            if ((openCard[0].firstElementChild.className == event.target.firstElementChild.className)
-                & (openCard[0]!=event.target))
+            if ((openCard[0].firstElementChild.className === event.target.firstElementChild.className)
+                && (openCard[0]!==event.target))
             {
                 event.target.classList.add('match');
                 openCard[0].classList.add('match');
@@ -151,27 +151,32 @@ deck.addEventListener('click', function(event) {
             else
             {event.target.classList.add('open', 'show');
                 openCard.push(event.target);
+
+                openCard.forEach(function (card) {
+                    card.classList.add('wrong')
+                });
                 //push it to the stack, wait 100 ms for it to disappear.
                 setTimeout(function () {
                     openCard.forEach(function (card) {
-                        card.classList.remove('open', 'show')
+                        card.classList.remove('open', 'show','wrong')
                     });
+
                     openCard = [];
                 }, 500);
             }}
 
         //Update the star counter.
-        if (((n_moves-10)/2 > n_matches) & n_stars===3 )
+        if (((n_moves-10)/2 > n_matches) && n_stars===3 )
         {n_stars=2;
             stars.innerHTML = makeStar()+' '+makeStar();
         }
-        else if (((n_moves-14)/2 > n_matches) & n_stars===2 )
+        else if (((n_moves-14)/2 > n_matches) && n_stars===2 )
         {n_stars=1;
             stars.innerHTML = makeStar();
         }
 
         //n_matches
-        if (n_matches===1) {
+        if (n_matches===8) {
             runTimer = false;
             cards = Array.from(deck.getElementsByClassName('card'));
             cards.forEach(function (card) {
@@ -185,15 +190,15 @@ deck.addEventListener('click', function(event) {
             setTimeout(function () {
                 modal.style.display = "block";
                 //
-                timeRun = document.getElementById("timer").innerHTML;
+                let timeRun = document.getElementById("timer").innerHTML;
                 document.getElementById("modal-html").innerHTML = 'You won the game in: '+timeRun+'. Would you like to play again?';
 
                 //You Win!!! Would You Like To Play Again?
-            },700)
+            },700);
 
 
             // Get the <span> element that closes the modal
-            var span = document.getElementsByClassName("close")[0];
+            let span = document.getElementsByClassName("close")[0];
 
             // When the user clicks on <span> (x), close the modal
             span.onclick = function() {
@@ -201,10 +206,10 @@ deck.addEventListener('click', function(event) {
             };
 
             // Yes Button.
-            var yes_btn = document.getElementById("yesBtn");
+            let yes_btn = document.getElementById("yesBtn");
 
             // No Button.
-            var no_btn = document.getElementById("noBtn");
+            let no_btn = document.getElementById("noBtn");
 
             // When the user clicks on the yes button, restart the game;
             yes_btn.onclick = function() {
@@ -228,7 +233,7 @@ deck.addEventListener('click', function(event) {
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-    if (event.target == modal) {
+    if (event.target === modal) {
         modal.style.display = "none";
     }
 };
