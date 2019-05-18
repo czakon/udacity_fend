@@ -50,7 +50,7 @@ function makeCard(c_class) {
 
 function makeStar() {
     return `<li>
-            <i class="fa fa-star"></i>
+            <i class="fa fa-star" style="font-size:2rem"></i>
             </li>`;
 
 }
