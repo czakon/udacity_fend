@@ -5,7 +5,7 @@
   <img width=500 src="https://github.com/czakon/udacity_fend/blob/master/udacity_fend_3/images/frogger_the_game.png">
 </p>
   
-To Run The Game: Navigate to `index.html`
+To play the game, download the project and open `index.html` in your browser.
 
 ## Techniques Used
 
