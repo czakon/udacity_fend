@@ -9,5 +9,5 @@ To play the game, download the project and open `index.html` in your browser.
 
 ## Techniques Used
 
-The purpose of this project was to demonstrate my mastery of object-oriented programming for Udacity's frontend developer course.
+The purpose of this project was to demonstrate my mastery of object-oriented programming for Udacity's frontend developer course. Udacity provided the starter code [here](https://github.com/udacity/frontend-nanodegree-arcade-game), and I implemented the functionality making it a playable game.
 
