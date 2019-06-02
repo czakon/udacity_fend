@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Effective JavaScript: Frogger</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div>
+      <span id="level" style="font-size:1.75rem">Level: 0</span>
+    </div>
+    <div>
+        <span style="font-size:1.75rem">Timer: </span>
+        <span id="timer" style="font-size:1.75rem">0m 0s</span>
+    </div>
+    <script src="js/resources.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/engine.js"></script>
+    <!-- The Modal -->
+    <div id="myModal2" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modal-html2" style="font-size:2rem">
+                Welcome To Frogger!<br>Get To The Water's Edge Within 2 Minutes To Win The Game.<br>Choose a player to start.
+            </p>
+            <ul class="image-container">
+                <p>
+                    <img src="images/char-boy.png" alt="bug boy" class="avatar" id="boy">
+                    <img src="images/char-cat-girl.png" alt="cat girl" class="avatar" id="cat-girl">
+                    <img src="images/char-pink-girl.png" alt="pink girl" class="avatar" id="pink-girl">
+                </p>
+                <p>
+                    <img src="images/char-horn-girl.png" alt="horn girl" class="avatar" id="horn-girl">
+                    <img src="images/char-princess-girl.png" alt="princess girl" class="avatar" id="princess-girl">
+                </p>
+            </ul>
+        </div>
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <p id="modal-html" style="font-size:2rem">
+                You Win! <br> Select continue to continue to the next level!
+            </p>
+            <!-- Yes Button -->
+            <ul class="button-container">
+                <i><button class="button" id="contBtn">Continue</button></i>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
