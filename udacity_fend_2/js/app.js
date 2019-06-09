@@ -4,8 +4,6 @@
  *   - shuffle the list of cards using the provided "shuffle" method below
  *   - loop through each card and create its HTML
  *   - add each card's HTML to the page
- * Open issue, how do you restart?
- * TODO: Implement the window function.
  */
 
 // Get the startTime for the timer.
