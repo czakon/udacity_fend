@@ -9,8 +9,7 @@
  * to ensure they don't run until the DOM is ready.
  */
 $(function() {
-    /* This is our first test suite - a test suite just contains
-    * a related set of tests. This suite is all about the RSS
+    /* Test Suite 1 - This suite is all about the RSS
     * feeds definitions, the allFeeds variable in our application.
     */
     describe('RSS Feeds', function() {
@@ -49,8 +48,8 @@ $(function() {
     });
 
 
-    /* Test suite: The menu */
-    describe('RSS Feeds', function() {
+    /* Test suite 2: The menu */
+    describe('The Menu', function() {
         /* Ensure that the menu element is
          * hidden by default.
          */
