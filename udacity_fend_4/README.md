@@ -4,7 +4,7 @@ This is the fourth project towards the Udacity front-end developer nano-degree. 
 # How To Run This Code
 Download the code and open `index.html` in a browser. You'll see the RSS feed in the top, and in the Jasmine test suite is displayed at the bottom and should look something like this:
 ![Example Of Jasmine Test Suite]
-(https://github.com/czakon/udacity_fend/blob/master/udacity_fend_4/Example_jasmine_test_suite.png) 
+(https://github.com/czakon/udacity_fend/udacity_fend_4/Example_jasmine_test_suite.png) 
 
 # Test Suites Written For This Application
 1. `RSS Feeds`
