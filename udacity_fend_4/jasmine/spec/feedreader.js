@@ -93,7 +93,8 @@ $(function() {
         });
 
         it('loadFeed returns at least one entry',function(done) {
-            expect(document.getElementsByClassName('entry').length).toBeGreaterThan(0);
+            expect(document.querySelectorAll('.feed .entry').length).toBeGreaterThan(0);
+
             done();
         });
     });
@@ -116,22 +117,23 @@ $(function() {
                 for (i = 0; i < x.length; i++) {
                     initFeeds+=x[i]['href'];
                 }
-                console.log('loadFeed1');
-                done();
+
+                //Let's call a different feed here.
+                loadFeed(2,function () {
+                    done();
+                });
             });
 
-            //Let's call a different feed here.
-            loadFeed(2,function () {
-                y = document.getElementsByClassName('entry-link')
-                newFeeds='';
-                for (i = 0; i < 1; i++) {
-                    newFeeds+=y[i]['href'];
-                }
-                console.log('loadFeed2');
-            });
+
         });
 
         it('Content changes when a new feed is loaded',function(done) {
+            y = document.getElementsByClassName('entry-link')
+            newFeeds='';
+            for (i = 0; i < 1; i++) {
+                newFeeds+=y[i]['href'];
+            }
+
             expect(newFeeds).not.toBe(initFeeds);
             done();
         });
