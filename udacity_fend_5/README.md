@@ -1,5 +1,8 @@
 # Mobile Web Specialist Certification Course
----
+To run this program do this:
+./serveit.py 8000
+This is the only way that I could figure out how to use the python server without having caching issues.
+
 #### _Three Stage Course Material Project - Restaurant Reviews_
 
 ## Project Overview: Stage 1
